@@ -1,0 +1,37 @@
+[
+    {
+        "itemId": "1",
+        "menuId": "1",
+        "categoriaItem": "Café",
+        "Nome": "Baixaria",
+        "valorItem": "R$13,00"
+    },
+    {
+        "itemId": "2",
+        "menuId": "1",
+        "categoriaItem": "Café",
+        "Nome": "Misto quente",
+        "valorItem": "R$10,00"
+    },
+    {
+        "itemId": "3",
+        "menuId": "1",
+        "categoriaItem": "Almoço",
+        "Nome": "Sopa Feijão",
+        "valorItem": "R$23,00"
+    },
+    {
+        "itemId": "1",
+        "menuId": "2",
+        "categoriaItem": "Janta",
+        "Nome": "Bife à cavala",
+        "valorItem": "R$15,00"
+    },
+    {
+        "itemId": "1",
+        "menuId": "3",
+        "categoriaItem": "Janta",
+        "Nome": "Pizza",
+        "valorItem": "R$45,00"
+    }
+]

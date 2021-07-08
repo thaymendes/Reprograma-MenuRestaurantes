@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "nomeRestaurante": "Sabor do Acre",
+        "horarioFuncionamento": "18h às 23h",
+        "diasFuncionamento": "Seg à Sáb",
+        "localização": "Rua alvorada, 25, Bosque",
+        "formasPagamento": "Cartões de crédito, débito, em dinheiro e pix"
+    },
+    {
+        "id": "2",
+        "nomeRestaurante": "Sabor do Sul",
+        "horarioFuncionamento": "18h às 23h",
+        "diasFuncionamento": "Seg à Sáb",
+        "localização": "Rua alvorada, 25, Bosque",
+        "formasPagamento": "Cartões de crédito, débito, em dinheiro e pix"
+    },
+    {
+        "id": "3",
+        "nomeRestaurante": "Sabor do Acre",
+        "horarioFuncionamento": "18h às 23h",
+        "diasFuncionamento": "Seg à Sáb",
+        "localização": "Rua alvorada, 25, Bosque",
+        "formasPagamento": "Cartões de crédito, débito, em dinheiro e pix"
+    }
+]

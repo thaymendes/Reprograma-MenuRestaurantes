@@ -1,0 +1,17 @@
+[
+    {
+        "menuId": "1",
+        "restauranteId": "1",
+        "tituloMenu":"Café da manhã"
+    },
+    {
+        "menuId": "2",
+        "restauranteId": "3",
+        "tituloMenu":"Café da manhã"
+    },
+    {
+        "menuId": "3",
+        "restauranteId": "1",
+        "tituloMenu":"Almoço"
+    }
+]
