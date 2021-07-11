@@ -1,5 +1,5 @@
 const restauranteJson = require("../model/restaurantes.json")
-const utils = require("../Utils/restauranteUtils")
+const utils = require("../utils/restauranteUtils")
 
 const buscarTodos = (request, response) => {
     response.status(200).send(restauranteJson)

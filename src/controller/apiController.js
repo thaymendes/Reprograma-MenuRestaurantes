@@ -2,7 +2,7 @@
 const pratosJson = require("../model/itensMenu.json")
 const menuJson = require("../model/menu.json")
 const restauranteJson = require("../model/restaurantes.json")
-const utils = require("../Utils/restauranteUtils")
+const utils = require("../utils/restauranteUtils")
 
 
 const buscarRestaurante = (request, response)=>{
