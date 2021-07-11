@@ -87,6 +87,315 @@ define({ "api": [
   },
   {
     "type": "delete",
+    "url": "/menu/:menuId",
+    "title": "deletar menu por id",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "menuId",
+            "description": "<p>id do menu</p>"
+          }
+        ]
+      }
+    },
+    "group": "Menu",
+    "version": "0.0.0",
+    "filename": "./src/routes/menuRoutes.js",
+    "groupTitle": "Menu",
+    "name": "DeleteMenuMenuid"
+  },
+  {
+    "type": "get",
+    "url": "/menu/",
+    "title": "buscar todos os menus",
+    "group": "Menu",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "lista",
+            "description": "<p>lista de menus</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK\n [\n    {\n        \"menuId\": \"1\",\n        \"restauranteId\": \"1\",\n        \"tituloMenu\": \"Café da manhã\"\n    },\n    {\n        \"menuId\": \"2\",\n        \"restauranteId\": \"3\",\n        \"tituloMenu\": \"Almoço\"\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./src/routes/menuRoutes.js",
+    "groupTitle": "Menu",
+    "name": "GetMenu"
+  },
+  {
+    "type": "get",
+    "url": "/menu/:menuId",
+    "title": "buscar menu por id",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "menuId",
+            "description": "<p>id do menu</p>"
+          }
+        ]
+      }
+    },
+    "group": "Menu",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "menuId",
+            "description": "<p>id do menu</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "restauranteId",
+            "description": "<p>id do menu</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "tituloMenu",
+            "description": "<p>titulo do menu</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK\n {\n        \"menuId\": \"2\",\n        \"restauranteId\": \"3\",\n        \"tituloMenu\": \"Almoço\"\n    }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./src/routes/menuRoutes.js",
+    "groupTitle": "Menu",
+    "name": "GetMenuMenuid"
+  },
+  {
+    "type": "patch",
+    "url": "/menu/atualizar/:restauranteId",
+    "title": "atualizar menu parcialmente",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "restauranteId",
+            "description": "<p>id do restaurante</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "tituloMenu",
+            "description": "<p>nome do menu</p>"
+          }
+        ]
+      }
+    },
+    "group": "Menu",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "menuId",
+            "description": "<p>id do menu</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "restauranteId",
+            "description": "<p>id do menu</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "tituloMenu",
+            "description": "<p>titulo do menu</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK\n  {\n        \"menuId\": \"2\",\n        \"restauranteId\": \"3\",\n        \"tituloMenu\": \"Almoço\"\n    }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./src/routes/menuRoutes.js",
+    "groupTitle": "Menu",
+    "name": "PatchMenuAtualizarRestauranteid"
+  },
+  {
+    "type": "post",
+    "url": "/menu/cadastrar",
+    "title": "criar menu",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "restauranteId",
+            "description": "<p>id do restaurante</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "tituloMenu",
+            "description": "<p>nome do restaurantes</p>"
+          }
+        ]
+      }
+    },
+    "group": "Menu",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "menuId",
+            "description": "<p>id do menu</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "restauranteId",
+            "description": "<p>id do menu</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "tituloMenu",
+            "description": "<p>titulo do menu</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK\n  {\n        \"menuId\": \"2\",\n        \"restauranteId\": \"3\",\n        \"tituloMenu\": \"Almoço\"\n    }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./src/routes/menuRoutes.js",
+    "groupTitle": "Menu",
+    "name": "PostMenuCadastrar"
+  },
+  {
+    "type": "put",
+    "url": "/menu/:menuId",
+    "title": "substituir menu",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "menuId",
+            "description": "<p>id do restaurante</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "restauranteId",
+            "description": "<p>id do restaurante</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "tituloMenu",
+            "description": "<p>nome do restaurantes</p>"
+          }
+        ]
+      }
+    },
+    "group": "Menu",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "menuId",
+            "description": "<p>id do menu</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "restauranteId",
+            "description": "<p>id do menu</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "tituloMenu",
+            "description": "<p>titulo do menu</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK\n {\n        \"menuId\": \"2\",\n        \"restauranteId\": \"3\",\n        \"tituloMenu\": \"Almoço\"\n    }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./src/routes/menuRoutes.js",
+    "groupTitle": "Menu",
+    "name": "PutMenuMenuid"
+  },
+  {
+    "type": "delete",
     "url": "/restaurantes/:restauranteId",
     "title": "deletar restaurante por id",
     "parameter": {
@@ -217,6 +526,119 @@ define({ "api": [
     "name": "GetRestaurantesRestauranteid"
   },
   {
+    "type": "patch",
+    "url": "/restaurantes/atualizar/:restauranteId",
+    "title": "atualizar restaurante parcialmente",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "restauranteId",
+            "description": "<p>id do restaurante</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "nomeRestaurante",
+            "description": "<p>nome do restaurantes</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "horarioFuncionamento",
+            "description": "<p>horarios de funcionamento do restaurantes</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "diasFuncionamento",
+            "description": "<p>dias de funcionamento do restaurantes</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "localizacao",
+            "description": "<p>endereço do restaurantes</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "formasPagamento",
+            "description": "<p>formade de pagamento aceitas no restaurantes</p>"
+          }
+        ]
+      }
+    },
+    "group": "Restaurantes",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "restauranteId",
+            "description": "<p>id do restaurantes</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "nomeRestaurante",
+            "description": "<p>nome do restaurantes</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "horarioFuncionamento",
+            "description": "<p>horarios de funcionamento do restaurantes</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "diasFuncionamento",
+            "description": "<p>dias de funcionamento do restaurantes</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "localizacao",
+            "description": "<p>endereço do restaurantes</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "formasPagamento",
+            "description": "<p>formade de pagamento aceitas no restaurantes</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK\n {\n    \"restauranteId\": \"1\",\n    \"nomeRestaurante\": \"Sabor do Acre\",\n    \"horarioFuncionamento\": \"18h às 23h\",\n    \"diasFuncionamento\": \"Seg à Sáb\",\n    \"localizacao\": \"Rua alvorada, 25, Bosque\",\n    \"formasPagamento\": \"Cartões de crédito, débito, em dinheiro e pix\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./src/routes/restaurantesRoutes.js",
+    "groupTitle": "Restaurantes",
+    "name": "PatchRestaurantesAtualizarRestauranteid"
+  },
+  {
     "type": "post",
     "url": "/restaurantes/cadastrar",
     "title": "criar restaurante",
@@ -328,119 +750,6 @@ define({ "api": [
     "filename": "./src/routes/restaurantesRoutes.js",
     "groupTitle": "Restaurantes",
     "name": "PostRestaurantesCadastrar"
-  },
-  {
-    "type": "put",
-    "url": "/restaurantes/atualizar/:restauranteId",
-    "title": "atualizar restaurante parcialmente",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "number",
-            "optional": false,
-            "field": "restauranteId",
-            "description": "<p>id do restaurante</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "nomeRestaurante",
-            "description": "<p>nome do restaurantes</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "horarioFuncionamento",
-            "description": "<p>horarios de funcionamento do restaurantes</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "diasFuncionamento",
-            "description": "<p>dias de funcionamento do restaurantes</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "localizacao",
-            "description": "<p>endereço do restaurantes</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "formasPagamento",
-            "description": "<p>formade de pagamento aceitas no restaurantes</p>"
-          }
-        ]
-      }
-    },
-    "group": "Restaurantes",
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "restauranteId",
-            "description": "<p>id do restaurantes</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "nomeRestaurante",
-            "description": "<p>nome do restaurantes</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "horarioFuncionamento",
-            "description": "<p>horarios de funcionamento do restaurantes</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "diasFuncionamento",
-            "description": "<p>dias de funcionamento do restaurantes</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "localizacao",
-            "description": "<p>endereço do restaurantes</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "formasPagamento",
-            "description": "<p>formade de pagamento aceitas no restaurantes</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Sucesso",
-          "content": "HTTP/1.1 200 OK\n {\n    \"restauranteId\": \"1\",\n    \"nomeRestaurante\": \"Sabor do Acre\",\n    \"horarioFuncionamento\": \"18h às 23h\",\n    \"diasFuncionamento\": \"Seg à Sáb\",\n    \"localizacao\": \"Rua alvorada, 25, Bosque\",\n    \"formasPagamento\": \"Cartões de crédito, débito, em dinheiro e pix\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "./src/routes/restaurantesRoutes.js",
-    "groupTitle": "Restaurantes",
-    "name": "PutRestaurantesAtualizarRestauranteid"
   },
   {
     "type": "put",

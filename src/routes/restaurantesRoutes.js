@@ -128,7 +128,7 @@ router.put("/:restauranteId", controller.substituirRestaurante)
 
 
 /**
- * @api {put} /restaurantes/atualizar/:restauranteId atualizar restaurante parcialmente
+ * @api {patch} /restaurantes/atualizar/:restauranteId atualizar restaurante parcialmente
  * @apiParam {number} restauranteId id do restaurante
  * @apiParam {String}  restauranteId id do restaurantes
  * @apiParam {String}  nomeRestaurante nome do restaurantes
