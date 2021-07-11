@@ -1,26 +1,27 @@
 [
     {
-        "id": "1",
+        "restauranteId": "1",
         "nomeRestaurante": "Sabor do Acre",
         "horarioFuncionamento": "18h às 23h",
         "diasFuncionamento": "Seg à Sáb",
-        "localização": "Rua alvorada, 25, Bosque",
+        "localizacao": "Rua alvorada, 25, Bosque",
         "formasPagamento": "Cartões de crédito, débito, em dinheiro e pix"
     },
     {
-        "id": "2",
+        "restauranteId": "2",
         "nomeRestaurante": "Sabor do Sul",
-        "horarioFuncionamento": "18h às 23h",
-        "diasFuncionamento": "Seg à Sáb",
-        "localização": "Rua alvorada, 25, Bosque",
+        "horarioFuncionamento": "18h às 20h",
+        "diasFuncionamento": "Seg à Sex",
+        "localizacao": "Rua gavião, 42, Floresta",
         "formasPagamento": "Cartões de crédito, débito, em dinheiro e pix"
     },
     {
-        "id": "3",
-        "nomeRestaurante": "Sabor do Acre",
-        "horarioFuncionamento": "18h às 23h",
-        "diasFuncionamento": "Seg à Sáb",
-        "localização": "Rua alvorada, 25, Bosque",
+        "restauranteId": "3",
+        "nomeRestaurante": "Sabor do Nordestino",
+        "horarioFuncionamento": "18h às 14h",
+        "diasFuncionamento": "Ter à Sáb",
+        "localizacao": "Rua 23, n25, Aviário",
         "formasPagamento": "Cartões de crédito, débito, em dinheiro e pix"
     }
+      
 ]

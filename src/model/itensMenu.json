@@ -3,21 +3,21 @@
         "itemId": "1",
         "menuId": "1",
         "categoriaItem": "Café",
-        "Nome": "Baixaria",
+        "nome": "Baixaria",
         "valorItem": "R$13,00"
     },
     {
         "itemId": "2",
         "menuId": "1",
         "categoriaItem": "Café",
-        "Nome": "Misto quente",
+        "nome": "Misto quente",
         "valorItem": "R$10,00"
     },
     {
         "itemId": "3",
         "menuId": "1",
         "categoriaItem": "Almoço",
-        "Nome": "Sopa Feijão",
+        "nome": "Sopa Feijão",
         "valorItem": "R$23,00"
     },
     {

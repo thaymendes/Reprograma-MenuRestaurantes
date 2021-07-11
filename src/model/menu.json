@@ -7,11 +7,11 @@
     {
         "menuId": "2",
         "restauranteId": "3",
-        "tituloMenu":"Café da manhã"
+        "tituloMenu":"Almoço"
     },
     {
         "menuId": "3",
         "restauranteId": "1",
-        "tituloMenu":"Almoço"
+        "tituloMenu":"Janta"
     }
 ]
