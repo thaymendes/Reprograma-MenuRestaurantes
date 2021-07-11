@@ -396,6 +396,360 @@
   },
   {
     "type": "delete",
+    "url": "/api/menu/:itemId",
+    "title": "remove prato pelo id",
+    "group": "Pratos",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "itemId",
+            "description": "<p>id do menu do prato</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./src/routes/itensRoutes.js",
+    "groupTitle": "Pratos",
+    "name": "DeleteApiMenuItemid"
+  },
+  {
+    "type": "get",
+    "url": "/api/menu/:itemId",
+    "title": "busca prato pelo id",
+    "group": "Pratos",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "itemId",
+            "description": "<p>nome a ser buscado</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "json",
+            "description": "<p>Json com as informações dos pratos</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK\n {\n        \"itemId\": \"1\",\n        \"menuId\": \"1\",\n        \"categoriaItem\": \"Café\",\n        \"nome\": \"Baixaria\",\n        \"valorItem\": \"R$13,00\"\n    }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./src/routes/itensRoutes.js",
+    "groupTitle": "Pratos",
+    "name": "GetApiMenuItemid"
+  },
+  {
+    "type": "get",
+    "url": "/api/menu/nome",
+    "title": "busca pratro pelo nome",
+    "group": "Pratos",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "nome",
+            "description": "<p>nome a ser buscado</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "json",
+            "description": "<p>Json com as informações dos pratos</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK\n [\n     {\n        \"itemId\": \"1\",\n        \"menuId\": \"1\",\n        \"categoriaItem\": \"Café\",\n        \"nome\": \"Baixaria\",\n        \"valorItem\": \"R$13,00\"\n    },\n    {\n        \"itemId\": \"2\",\n        \"menuId\": \"1\",\n        \"categoriaItem\": \"Café\",\n        \"nome\": \"Misto quente\",\n        \"valorItem\": \"R$10,00\"\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./src/routes/itensRoutes.js",
+    "groupTitle": "Pratos",
+    "name": "GetApiMenuNome"
+  },
+  {
+    "type": "get",
+    "url": "/pratos/",
+    "title": "buscar todos os menus",
+    "group": "Pratos",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "lista",
+            "description": "<p>lista de menus</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK\n [\n     {\n        \"itemId\": \"1\",\n        \"menuId\": \"1\",\n        \"categoriaItem\": \"Café\",\n        \"nome\": \"Baixaria\",\n        \"valorItem\": \"R$13,00\"\n    },\n    {\n        \"itemId\": \"2\",\n        \"menuId\": \"1\",\n        \"categoriaItem\": \"Café\",\n        \"nome\": \"Misto quente\",\n        \"valorItem\": \"R$10,00\"\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./src/routes/itensRoutes.js",
+    "groupTitle": "Pratos",
+    "name": "GetPratos"
+  },
+  {
+    "type": "patch",
+    "url": "/api/menu/atualizar/:itemId",
+    "title": "atualizar prato",
+    "group": "Pratos",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "itemId",
+            "description": "<p>id do prato</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "menuId",
+            "description": "<p>id do menu do prato</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "categoriaItem",
+            "description": "<p>categoria do prato</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "nome",
+            "description": "<p>do prato</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "valoritem",
+            "description": "<p>valor individual do prato</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "json",
+            "description": "<p>Json com as informações dos pratos</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./src/routes/itensRoutes.js",
+    "groupTitle": "Pratos",
+    "name": "PatchApiMenuAtualizarItemid"
+  },
+  {
+    "type": "post",
+    "url": "/api/menu/cadastrar",
+    "title": "cadastra prato",
+    "group": "Pratos",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "menuId",
+            "description": "<p>id do menu do prato</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "categoriaItem",
+            "description": "<p>categoria do prato</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "nome",
+            "description": "<p>do prato</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "valoritem",
+            "description": "<p>valor individual do prato</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "json",
+            "description": "<p>Json com as informações dos pratos</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 201 CREATED",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./src/routes/itensRoutes.js",
+    "groupTitle": "Pratos",
+    "name": "PostApiMenuCadastrar"
+  },
+  {
+    "type": "put",
+    "url": "/api/menu/:itemId",
+    "title": "substituir o prato",
+    "group": "Pratos",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "itemId",
+            "description": "<p>id do prato</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "menuId",
+            "description": "<p>id do menu do prato</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "categoriaItem",
+            "description": "<p>categoria do prato</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "nome",
+            "description": "<p>do prato</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "valoritem",
+            "description": "<p>valor individual do prato</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "json",
+            "description": "<p>Json com as informações dos pratos</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./src/routes/itensRoutes.js",
+    "groupTitle": "Pratos",
+    "name": "PutApiMenuItemid"
+  },
+  {
+    "type": "delete",
     "url": "/restaurantes/:restauranteId",
     "title": "deletar restaurante por id",
     "parameter": {
